@@ -42,5 +42,15 @@ end
 # Part III
 def hash_2_array contacts
     # YOUR CODE HERE
+    keys = contacts.keys
+l = contacts.length
+arr = Array.new(3){Array.new(l)}
+for i in 0..l-1
+arr[2][i] = keys[i]
+arr[0][i] = contacts[keys[i]][:email]
+arr[1][i] = contacts[keys[i]][:phone]
+end
+puts arr
+
    
 end
