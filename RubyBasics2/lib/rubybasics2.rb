@@ -19,4 +19,10 @@ end
 # Part III
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  $n="Hello".unpack("B40")
+if n % 4 == 0
+  return true
+  else 
+    return false
+  end
 end
