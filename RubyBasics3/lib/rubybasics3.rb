@@ -14,4 +14,9 @@ end
 def price_as_string
 format("$%.2f", @price)
 end
+book = BookInStock.new("isbn1", 33.80)
+puts "ISBN = #{book.isbn}"
+puts "Price = #{book.price_as_string}"
+book.price = book.price * 0.75
+puts "New price = #{book.price_as_string}"
 end
