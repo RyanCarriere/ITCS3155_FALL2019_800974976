@@ -10,12 +10,14 @@ class ArticlesController < ApplicationController
     end
     def create
         @article = Article.new(article_params)
+        byebug
     if 
-    @article.save
-    redirect_to 
-    @article 
+        byebug
+        @article.save
+        redirect_to 
+        @article 
     else 
-    render 'new' 
+        render 'new' 
     end
    
     def edit 
