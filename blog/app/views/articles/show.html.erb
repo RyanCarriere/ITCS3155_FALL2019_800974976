@@ -9,6 +9,7 @@
 </p>
 
 <h2>Comments</h2>
+<% @article.comments.each do |comment| %>
 <p>
     <strong>Comment:</strong>
     <%= comment.commenter %>
@@ -17,7 +18,7 @@
     <strong>Commenter:</strong>
     <%= comment.body %>
 </p>
-
+<% end %>
 <h2>Add a comment:</h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 <p>
