@@ -12,17 +12,5 @@
 <% @article.comments.each do |comment| %>
 <%= render @article.comments %>
 <h2>Add a comment:</h2>
-<%= form_for([@article, @article.comments.build]) do |f| %>
-<p>
- <%= f.label :commenter %><br>
- <%= f.text_field :commenter %>
-</p>
-<p>
- <%= f.label :body %><br>
- <%= f.text_area :body %>
-</p>
-<p>
-    <%= f.submit %>
-</p>
-<% end %>git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short master --all
+<%= render 'comments/form' %>
 <%= link_to 'Article List', articles_path %>
